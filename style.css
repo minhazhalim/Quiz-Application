@@ -1,0 +1,73 @@
+:root {
+     --hue-neutral: 200;
+     --hue-correct: 145;
+     --hue-wrong: 0;
+}
+*,::before,*::after {
+     box-sizing: border-box;
+     font-family: Gotham Rounded;
+}
+body {
+     --hue: var(--hue-neutral);
+     margin: 0px;
+     padding: 0px;
+     width: 100vw;
+     height: 100vh;
+     background-color: hsl(var(--hue),100%,20%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+body.correct {
+     --hue: var(--hue-correct);
+}
+body.wrong {
+     --hue: var(--hue-wrong);
+}
+.container {
+     width: 800px;
+     max-width: 80%;
+     padding: 10px;
+     background-color: white;
+     border-radius: 5px;
+     box-shadow: 0px 0px 10px 2px;
+}
+.button-grid {
+     margin: 20px 0px;
+     display: grid;
+     grid-template-columns: repeat(2,auto);
+     gap: 10px;
+}
+.button {
+     --hue: var(--hue-neutral);
+     border: 1px solid hsl(var(--hue),100%,30%);
+     outline: none;
+     background-color: hsl(var(--hue),100%,50%);
+     color: white;
+     border-radius: 5px;
+     padding: 5px 10px;
+     text-transform: capitalize;
+}
+.button:hover {
+     border-color: black;
+}
+.button.correct {
+     --hue: var(--hue-correct);
+     color: black;
+}
+.button.wrong {
+     --hue: var(--hue-wrong);
+}
+.start-button,.next-button {
+     font-size: 1.5rem;
+     font-weight: bold;
+     padding: 10px 20px;
+}
+.controls {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.hide {
+     display: none;
+}
