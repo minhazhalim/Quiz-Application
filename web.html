@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Quiz App | CodingNepal</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==' crossorigin='anonymous'/>
+    <script src="questions.js"></script>
+    <script src="application.js" defer></script>
+</head>
+<body>
+    <div class="start_button"><button type="button">start quiz</button></div>
+    <div class="info_box">
+        <div class="info-title"><span>some rules of this quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. you will have only <span>15 seconds</span> per each question.</div>
+            <div class="info">2. once you select your answer, it can't be undone.</div>
+            <div class="info">3. you can't select any option once time goes off.</div>
+            <div class="info">4. you can't exit from the quiz while you're playing.</div>
+            <div class="info">5. you'll get points on the basis of your correct answers.</div>
+        </div>
+        <div class="buttons">
+            <button type="button" class="quit">exit quiz</button>
+            <button type="button" class="restart">continue</button>
+        </div>
+    </div>
+    <div class="quiz_box">
+        <header>
+            <div class="title">awesome quiz application</div>
+            <div class="timer">
+                <div class="time_left_txt">time left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text"></div>
+            <div class="option_list"></div>
+        </section>
+        <footer>
+            <div class="total_que"></div>
+            <button type="button" class="next_button">next question</button>
+        </footer>
+    </div>
+    <div class="result_box">
+        <div class="icon"><i class="fas fa-crown"></i></div>
+        <div class="complete_text">you've completed the quiz!</div>
+        <div class="score_text"></div>
+        <div class="buttons">
+            <button type="button" class="restart">replay quiz</button>
+            <button type="button" class="quit">quit quiz</button>
+        </div>
+    </div>
+</body>
+</html>
